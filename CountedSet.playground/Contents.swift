@@ -10,19 +10,15 @@ struct CountedSet<Element: Hashable>: ExpressibleByArrayLiteral {
         }
     }
 
-    
     mutating func insert(_ element: Element) {
         dictionary[element] = (dictionary[element] ?? 0) + 1
     }
  
     mutating func remove(_ element: Element) {
-        
         let count = dictionary[element] ?? 0
-        
         if count > 0 {
             dictionary[element] = count - 1
         }
-        
     }
 
     subscript(_ member: Element) -> Int {
@@ -31,8 +27,6 @@ struct CountedSet<Element: Hashable>: ExpressibleByArrayLiteral {
     
     private var countedSet: [Element] = []
 }
-
-
 
 enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
