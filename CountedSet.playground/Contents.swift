@@ -34,9 +34,5 @@ aCountedSet[.iron] // 0
 var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
 myCountedSet[.iron] // 4
 myCountedSet.remove(.iron) // 3
-myCountedSet[.iron]
 myCountedSet.remove(.dwarvish) // 0
 myCountedSet.remove(.magic) // 0
-myCountedSet[.magic]
-myCountedSet.insert(.dwarvish)
-myCountedSet[.dwarvish]
